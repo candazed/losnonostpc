@@ -56,7 +56,6 @@ function mostrarFullListado() {
                         <div class="btn-group me-2" role="group" aria-label="First group">
                         <button type="button" class="btn btn-f btn-outline-secondary">2</button>
                         <button type="button" class="btn btn-f btn-outline-secondary">4</button>
-                        <button type="button" class="btn btn-f btn-outline-secondary">5</button>
                         <button type="button" class="btn btn-f btn-outline-secondary">6</button>
                         </div>
                         <div class="btn-group me-2" role="group" aria-label="Second group">
@@ -119,11 +118,9 @@ function filtrar() {
     console.log('filtrar: clicked')
 
     switch (filtro) {
-        case 3: mostrarCabaniasFiltradas(3);
+        case 2: mostrarCabaniasFiltradas(2);
             break;
         case 4: mostrarCabaniasFiltradas(4);
-            break;
-        case 5: mostrarCabaniasFiltradas(5);
             break;
         case 6: mostrarCabaniasFiltradas(6);
             break;
