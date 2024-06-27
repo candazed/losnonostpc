@@ -1,0 +1,154 @@
+#div-cabania {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+#btnvolver {
+    color: rgb(117, 117, 117);
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+}
+#btnvolver:hover {
+    color: rgb(41, 41, 41);
+    transition-duration: 1s;
+}
+#id-json {
+    font-weight: bold;
+    font-size:xx-large;
+}
+#desc-json {
+    font-size: larger;
+}
+[id^="car-"] {
+    font-size: larger;
+    line-height: 2.5;
+}
+@media (max-width: 991px) {
+    [id^="listacar-"] {
+        width: 100% !important;
+    }
+}
+#precio-json {
+    padding: 5px;
+    text-align: right;
+    font-size: x-large;
+    font-weight: bold;
+}
+#divreserva {
+    display: grid;
+    place-items: center ;
+}
+#btnreserva {
+    font-weight: bold;
+    font-size: larger;
+    width: 200px;
+}
+@media (max-width: 991px) {
+    #precio-json {
+        width: 50%;
+    }
+    #divreserva {
+        width: 50%;
+    }
+}
+#containerGral {
+    background-color: #eaeaea;
+}
+
+/*  LISTADO CABAÑAS */
+@media (max-width: 991px) {
+    #filtrodiv {
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+}
+
+.btn-toolbar{margin-bottom: 15px;}
+
+#containerAll{
+    margin-top: 115px;
+    background-color: #eaeaea;
+}
+.filtro-wrapper{
+    padding-top: 25px;
+}
+.cabanias-wrapper{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+.cabania{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 50px;
+}
+.cabania-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px 0px;
+}
+.cabania > img{
+    height: 20%;
+    width: 30%;
+    margin: 3px;
+    margin-right: 12px;
+}
+.cabania-bottom-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.cabania-btn{
+    width: fit-content;
+}
+.precio{
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 10px;
+}
+@media (max-width: 991px) {
+    .cabania > img{
+        width: 40%;
+        margin: 10px 3px;
+        margin-right: 12px;
+    }
+}
+@media (max-width: 767px) {
+    .cabania{
+        display: flex;
+        flex-direction: column;
+    }
+    .cabania > img{
+        height: 100%;
+        width: auto;
+        margin: 3px;
+    }
+    .cabania-body{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .cabania-txt{ font-size: smaller; }
+}
+@media (max-width: 425px) {
+    .cabania-bottom-body{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .precio{
+        font-size: larger;
+        margin-left: 0;
+    }
+}
+@media (max-width: 375px) {
+    .cabania > img{
+        margin: 0;
+        margin-bottom: 3px;
+    }
+    .cabania-txt{ font-size: smaller; }
+    .precio{ margin-bottom: 5px; }
+}

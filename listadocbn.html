@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabañas</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="Imagenes/favicon.ico" type="image/x-icon">
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylescbn.css">
+    <link rel="stylesheet" href="stylesform.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid p-0" id="containerGral"> <!-- whatsapp -->
+        <a href="https://api.whatsapp.com/send?phone=123456789" class="btnwsp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <!-- HEADER -->
+        <header>
+            <!-- Barra -->
+            <div class="seccionsup">
+                <i class="fa-solid fa-location-dot"></i> Gral. Pedernera 00
+            </div>
+            <!-- NavBar -->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary bg-black p-0 m-0" id="transparencia">
+                <div class="container-fluid container-nav bg-black">
+                    <a class="navbar-brand" href="index.html"><img src="Imagenes/LOGO.png" alt="" width="180px"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <!--  onclick="navOpacoHamburguesa()" -->
+                        <i class="fa-solid fa-bars menuh"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="index.html#sobrenosotros">Sobre
+                                    Nosotros</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white" href="#">Cabañas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.html#contenedorc">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.html#contenedorst">Sitios de Interes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- LISTADO CABAÑAS -->
+        <div class="container" id="containerAll">
+
+        </div>
+        <!-- Form Resenias -->
+        <div class="container oculto" id="f-resenias">
+            <hr>
+            <div class="row rsn">
+                <div class="col">
+                    <h3>Reseñas</h3>
+                    <div id="">
+                        <i class="fa-solid fa-star overallScore"></i>
+                        <i class="fa-solid fa-star overallScore"></i>
+                        <i class="fa-solid fa-star overallScore"></i>
+                        <i class="fa-solid fa-star overallScore"></i>
+                        <i class="fa-solid fa-star overallScore"></i>
+                        <span >(184)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row rsn">
+                <div class="col">
+                    <div class="resenias">
+                        <h6>Últimas reseñas</h6>
+                        <div id="review">
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i><br>
+                            <span class="score">Nombre Apellido</span>
+                            <p class="rev">Hola soy una reseña</p>
+                        </div>
+                        <div id="review">
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i><br>
+                            <span class="score">Nombre Apellido</span>
+                            <p class="rev">Hola soy una reseña</p>
+                        </div>
+                        <div id="review">
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i>
+                            <i class="fa-solid fa-star score"></i><br>
+                            <span class="score">Nombre Apellido</span>
+                            <p class="rev">Hola soy una reseña</p>
+                        </div>
+                        <div id="review">
+                            <p style="color: blue; text-decoration: underline;">+Ver más reseñas</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col">
+                    <h5>Tu reseña</h5>
+                    <div class="rating">
+                        <div id="stars">
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </div>
+                    </div>
+                    <form name="resenias" id="formularioResenias" action="#">
+                        <div class="mb-2">
+                            <label for="rsnNombreApe" class="form-label">Nombre y Apellido</label>
+                            <input type="text" class="form-control" id="rsnNombreApe" minlength="3" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="rsnContacto" class="form-label">Teléfono</label>
+                            <input type="text" class="form-control" id="rsnContacto" minlength="10" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="rsnTextArea" class="form-label">Reseña</label>
+                            <textarea class="form-control" id="rsnTextArea" rows="3" placeholder="Tu opinión nos ayuda a crecer"></textarea>
+                        </div>
+                        <button type="submit" id="btnenviar-rev" class="btn btn-dark">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <footer>
+            <div class="row">
+                <div id="secf" class="col-4" style="padding-left: 100px;">
+                    <p style="font-weight: bold;">Contacto</p>
+                    <hr>
+                    <p> <i class="fa-solid fa-phone"></i> 2664 255401</p>
+                    <p> <i class="fa-solid fa-phone"></i> 2664 552201</p>
+                </div>
+                <div id="secf" class="col-4">
+                    <p style="font-weight: bold;">Redes Sociales</p>
+                    <hr>
+                    <a href="www.facebook.com" id="rsfooter"><i class="fa-brands fa-facebook-f"></i> Facebook</a> <br> <br>
+                    <a href="www.instagram.com" id="rsfooter"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                </div>
+                <div id="secf" class="col-4">
+                    <p>No dudes en contactarnos y hacer tu reserva ahora mismo para disfrutar de la comodidad de
+                        nuestras cabañas.</p>
+                    <hr>
+                    <a href="listadocbn.html" id="rsfooter"> Ver cabañas disponibles</a>
+                </div>
+            </div>
+            <div id="creadores" class="col-8 mx-auto">
+                <hr>
+                <p> © 2015-2024 | Trapiche, San Luis, Argentina</p>
+                <p>Diseño y Desarrollo a cargo de Candela Nahir Gonzalez y Bettina Jofre Pasinetti</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/51d2388034.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="scriptcbn.js"></script>
+    <script src="scriptform.js"></script>
+</body>
+
+</html>

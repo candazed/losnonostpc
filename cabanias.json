@@ -1,0 +1,72 @@
+{
+    "cabanias" : [
+        {
+            "id" : "Cabaña Roja",
+            "cantP" : 6,
+            "img1" : "/IMG-Cabañas/cbñ-roja0.jpeg",
+            "img2" : "/IMG-Cabañas/cbñ-roja5.jpg",
+            "img3" : "/IMG-Cabañas/cbñ-roja3.jpg",
+            "img4" : "/IMG-Cabañas/cbñ-roja2.jpg",
+            "img5" : "/IMG-Cabañas/galeria2.jpg",
+            "img6" : "/IMG-Cabañas/cbñ-roja6.jpg",
+            "desc" : "Espaciosa cabaña ideal para familias numerosas. Cuenta además con un patio amplio perfecto para actividades recreativas y momentos al aire libre.",
+            "caracts": [
+                {"car-1" : "<i class='fa-solid fa-person'></i> 6 Personas."},
+                {"car-2" : "<i class='fa-solid fa-bed'></i> 3 Habitaciones."},
+                {"car-3" : "<i class='fa-solid fa-bath'></i> 1 Baño."},
+                {"car-4" : "<i class='fa-solid fa-wifi'></i> Wi-Fi."},
+                {"car-5" : "<i class='fa-solid fa-tv'></i> Direct-TV."},
+                {"car-6" : "<i class='fa-solid fa-people-roof'></i> Galeria techada con asador."},
+                {"car-7" : "<i class='fa-solid fa-kitchen-set'></i> Cocina integrada con heladera, microondas, cocina, y pava eléctrica."},
+                {"car-8" : "<i class='fa-solid fa-water'></i> Rio frente a la cabaña."},
+                {"car-9" : "<i class='fa-solid fa-car-tunnel'></i> Cochera techada."}
+            ],
+            "precio": 40000
+        },
+        {
+            "id" : "Cabaña Verde",
+            "cantP" : 4,
+            "img1" : "IMG-Cabañas/cbñ-verde0.jpeg",
+            "img2" : "IMG-Cabañas/cbñ-verde3.jpg",
+            "img3" : "IMG-Cabañas/cbñ-verde2.jpg",
+            "img4" : "IMG-Cabañas/galeria2.jpg",
+            "img5" : "IMG-Cabañas/garaje0.jpg",
+            "img6" : "IMG-Cabañas/patio2.jpg",
+            "desc" : "Pequeña cabaña con dos ambientes, muy acogedora. Incluye un patio ideal para disfrutar actividades recreativas en un entorno tranquilo y natural.",
+            "caracts": [
+                {"car-1" : "<i class='fa-solid fa-person'></i> 4 Personas."},
+                {"car-2" : "<i class='fa-solid fa-bed'></i> 2 Habitaciones."},
+                {"car-3" : "<i class='fa-solid fa-bath'></i> 1 Baño."},
+                {"car-4" : "<i class='fa-solid fa-wifi'></i> Wi-Fi."},
+                {"car-5" : "<i class='fa-solid fa-tv'></i> Direct-TV."},
+                {"car-6" : "<i class='fa-solid fa-people-roof'></i> Galeria techada con asador."},
+                {"car-7" : "<i class='fa-solid fa-kitchen-set'></i> Cocina integrada con heladera, microondas, anafe, y pava eléctrica."},
+                {"car-8" : "<i class='fa-solid fa-water'></i> Rio frente a la cabaña."},
+                {"car-9" : "<i class='fa-solid fa-car-tunnel'></i> Cochera techada."}
+            ],
+            "precio": 28000
+        },
+        {
+            "id" : "Cabaña Naranja",
+            "cantP" : 2,
+            "img1" : "IMG-Cabañas/cbñ-Naranja0.jpeg",
+            "img2" : "IMG-Cabañas/cbñ-naranja1.jpg",
+            "img3" : "IMG-Cabañas/cbñ-naranja2.jpg",
+            "img4" : "IMG-Cabañas/garaje0.jpg",
+            "img5" : "IMG-Cabañas/pationaranja.jpg",
+            "img6" : "IMG-Cabañas/cbñ-naranja3.jpg",
+            "desc" : "Acogedora cabaña, perfecta para disfrutar y desconectarse de la rutina",
+            "caracts": [
+                {"car-1" : "<i class='fa-solid fa-person'></i> 2 Personas."},
+                {"car-2" : "<i class='fa-solid fa-bed'></i> 1 Habitación."},
+                {"car-3" : "<i class='fa-solid fa-bath'></i> 1 Baño."},
+                {"car-4" : "<i class='fa-solid fa-wifi'></i> Wi-Fi."},
+                {"car-5" : "<i class='fa-solid fa-tv'></i> Direct-TV."},
+                {"car-6" : "<i class='fa-solid fa-people-roof'></i> Asador en el patio."},
+                {"car-7" : "<i class='fa-solid fa-kitchen-set'></i> Cocina integrada con heladera y cocina"},
+                {"car-8" : "<i class='fa-solid fa-water-ladder'></i> Pileta."}
+            ],
+            "precio": 24000
+        }
+    ]
+}

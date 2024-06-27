@@ -1,0 +1,227 @@
+.btnwsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #94d440;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+.btnwsp:hover {
+    background: #ffffff;
+    color: #94d440;
+}
+.seccionsup {
+    background-color: #282828; /* Color de fondo de la sección */
+    color: #ffffffde; /* Color del texto */
+    padding: 5px 20px; /* Espaciado interior */
+    position: relative;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima del contenido principal */
+    text-align: right;
+}
+
+#carrusel {
+    z-index: -10;
+    /*margin-top: -150px;*/
+}
+#transparencia {
+    display: block;
+}
+header {
+    z-index: 90;
+    width: 100%; 
+    position: fixed;
+    top: 0;
+    background: none;
+}
+.navbar{
+    transition: all 1s;
+}
+.menuh{
+    color: #eaeaea;
+    padding: 6px;
+}
+/* SOBRE NOSOTROS */
+#sobrenosotros {
+    position: relative;
+    width: 100%;
+}
+#contenidosn {
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    padding: 120px 50px 80px 50px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    line-height: 1.7;
+    z-index: 2;
+    background-color: #d9d9d9;
+}
+#fondosn {
+    background-image: url(Imagenes/fondosn.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+#fondosn-md {
+    background-image: url(Imagenes/fondosn-md.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+@media (max-width: 600px) {
+    #contenidosn {
+      font-size: smaller;
+    }
+    #imagenslogan {
+        width: 100% !important; 
+    } 
+}
+#contenidosn.visible {
+    background-color: transparent;
+    transition-duration: 2.5s;
+}
+/* BOTON CABAÑAS */
+#btncbn {
+    width: 250px;
+    height: 60px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #141414;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 0px 46px 8px rgba(20,20,20,1);
+    text-decoration: none;
+}
+#fondocbn {
+    background-image: url(Imagenes/TRAPICHE/patio4-oscuro.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 150px 100px;
+    display: grid;
+    place-items: center;
+}
+@media (max-width: 600px){
+    #fondocbn {padding: 80px 50px;}
+}
+/* CONTACTO */
+
+#contenedorc {
+    background-image: url(Imagenes/fondoc.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+#contenidoc {
+    padding: 120px 130px 90px 100px;
+}
+.btnredes {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    bottom: 30px;
+    right: 30px;
+    color: #fff;
+    border-radius: 50px;
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+} 
+@media (max-width: 1000px){
+    #contenidoc {
+        padding: 50px;
+    }
+    #contenidoc-1 {width: 100%;}
+    #contenidoc-2 {width: 100%; height: 300px;}
+} 
+
+/*SITIOS DE INTERES*/
+#contenedorst {
+    background-image: url(Imagenes/fondost.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 60px 140px;
+    text-align: center;
+}
+@media (max-width: 1000px){
+    #contenedorst {
+        padding: 20px;
+    }
+}
+.st-container{
+    margin-top: 25px;
+}
+.cabania-text{
+    margin: 0px 10px 15px 0px;
+}
+.st-item{
+    max-height: 300px;
+}
+.iconmapa-st {
+    color: white;
+    font-size: larger;
+    text-shadow: #141414;
+}
+.iconmapa-st:hover {
+    color: #c0f57a;
+    font-size: x-large;
+    transition-duration: 1s;
+}
+/* FOOTER */
+footer {
+    background-color: #141414;
+    width: 100%;
+    /* height: 400px; */
+}
+#secf {
+    /* width: 33.33%; */
+    float: left;
+    color: white;
+    padding: 50px;
+    font-size: large;
+}
+@media (max-width: 991px) {
+    #secf {
+        width: 100%;
+        padding: 30px !important;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #141414;
+    }
+}
+#rsfooter {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+#creadores {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+/* CARRUSEL SITIOS DE INTERES*/

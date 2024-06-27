@@ -1,0 +1,75 @@
+/*  FORM RESERVAS  */
+#div-form {
+    background-color: #eaeaea;
+    padding: 100px;
+}
+#contenedorprecio {
+    text-align: right;
+    font-weight: bold;
+}
+@media (max-width: 767px){
+    [class^="col-"] {
+        width: 100% !important;
+    }
+    #div-form {
+        padding: 30px;
+    }
+}
+
+/*  FORM RESEÑAS  */
+.oculto {
+    display: none;
+  }
+#f-resenias{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.resenias{
+    margin: 10px auto 10px 15px;
+}
+.overallScore{
+font-size: 22px;
+color: gold;
+}
+.score{
+    font-size: 18px;
+}
+
+/*  star rating  */
+.rating {
+    display: flex;
+    justify-content: center;
+    margin: 3px 8px;
+}
+#stars{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.star {
+    font-size: 32px;
+    color: #ddd;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.star:hover,
+.star.checked {
+    color: gold;
+}
+
+@media (max-width: 667px) {
+    #stars{
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+    .rsn{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    #stars{
+        justify-content: space-between;
+    }
+}
