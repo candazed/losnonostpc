@@ -54,7 +54,7 @@ function mostrarFullListado() {
                 <div class="col" id="filtrodiv">
                     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group me-2" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-f btn-outline-secondary">3</button>
+                        <button type="button" class="btn btn-f btn-outline-secondary">2</button>
                         <button type="button" class="btn btn-f btn-outline-secondary">4</button>
                         <button type="button" class="btn btn-f btn-outline-secondary">5</button>
                         <button type="button" class="btn btn-f btn-outline-secondary">6</button>
@@ -84,7 +84,7 @@ const mostrarCabaniasFiltradas = (cantidad) => {
             let cont = -1;
             res.cabanias.forEach(dato => {
                 cont++;
-                if (dato.cantP >= cantidad) {
+                if (dato.cantP == cantidad) {
                     let cabaniaHTML = `
                     <div class="cabania">
                             <img src="${dato.img1}" class="img-thumbnail" alt="Cabaña en alquiler">
