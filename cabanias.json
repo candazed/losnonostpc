@@ -3,12 +3,12 @@
         {
             "id" : "Cabaña Roja",
             "cantP" : 6,
-            "img1" : "/IMG-Cabañas/cbñ-roja0.jpeg",
-            "img2" : "/IMG-Cabañas/cbñ-roja5.jpg",
-            "img3" : "/IMG-Cabañas/cbñ-roja3.jpg",
-            "img4" : "/IMG-Cabañas/cbñ-roja2.jpg",
-            "img5" : "/IMG-Cabañas/galeria2.jpg",
-            "img6" : "/IMG-Cabañas/cbñ-roja6.jpg",
+            "img1" : "IMG-Cabañas/cbñ-roja0.jpeg",
+            "img2" : "IMG-Cabañas/cbñ-roja5.jpg",
+            "img3" : "IMG-Cabañas/cbñ-roja3.jpg",
+            "img4" : "IMG-Cabañas/cbñ-roja2.jpg",
+            "img5" : "IMG-Cabañas/galeria2.jpg",
+            "img6" : "IMG-Cabañas/cbñ-roja6.jpg",
             "desc" : "Espaciosa cabaña ideal para familias numerosas. Cuenta además con un patio amplio perfecto para actividades recreativas y momentos al aire libre.",
             "caracts": [
                 {"car-1" : "<i class='fa-solid fa-person'></i> 6 Personas."},
