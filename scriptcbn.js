@@ -294,7 +294,7 @@ const mostrarForm = (indice) => {
                             <button class="btn btn-dark" type="button" id="btnenviar-res">Enviar datos</button>
                         </div>
                         <div class="col" id="contenedorprecio">
-                            <div id="precio">"El precio estimado es de: "</div>
+                            <div id="precio"></div>
                         </div>
                     </div>
                 </form>
