@@ -136,6 +136,11 @@ function toggleDiv() {
     div.classList.toggle("oculto");
   }
 
+function solicitaReserva(ind){
+    mostrarForm(ind)
+    toggleDiv()
+}
+
 // acciones botones
 const mostrarMasInfo = (indice) => {
     toggleDiv();
@@ -195,7 +200,7 @@ const mostrarMasInfo = (indice) => {
                             $${res.cabanias[indice].precio} por día
                         </div>
                         <div id="divreserva" class="col-3">
-                            <button id="btnreserva"  type="button" class="btn btn-dark" onclick="mostrarForm(${indice})">SOLICITAR RESERVA</button>
+                            <button id="btnreserva"  type="button" class="btn btn-dark" onclick="solicitaReserva(${indice})">SOLICITAR RESERVA</button>
                         </div>
                     </div>
                 </div>    
