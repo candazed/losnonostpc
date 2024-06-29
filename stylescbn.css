@@ -1,3 +1,4 @@
+/*  DETALLES CABAÑA  */
 #div-cabania {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -55,7 +56,18 @@
     background-color: #eaeaea;
 }
 
+
 /*  LISTADO CABAÑAS */
+.btn-toolbar{margin-bottom: 15px;}
+
+#containerAll{
+    margin-top: 115px;
+    background-color: #eaeaea;
+}
+
+.filtro-wrapper{
+    padding-top: 25px;
+}
 @media (max-width: 991px) {
     #filtrodiv {
         width: 100%;
@@ -64,15 +76,6 @@
     }
 }
 
-.btn-toolbar{margin-bottom: 15px;}
-
-#containerAll{
-    margin-top: 115px;
-    background-color: #eaeaea;
-}
-.filtro-wrapper{
-    padding-top: 25px;
-}
 .cabanias-wrapper{
     width: 100%;
     height: 100%;
@@ -134,7 +137,7 @@
     }
     .cabania-txt{ font-size: smaller; }
 }
-@media (max-width: 425px) {
+@media (max-width: 430px) {
     .cabania-bottom-body{
         flex-direction: column;
         align-items: flex-start;
