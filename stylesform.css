@@ -14,6 +14,11 @@
     #div-form {
         padding: 30px;
     }
+    #precio-json{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
 }
 
 /*  FORM RESEÑAS  */
@@ -58,18 +63,13 @@ color: gold;
     color: gold;
 }
 
-@media (max-width: 667px) {
-    #stars{
-        justify-content: center;
-    }
-}
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .rsn{
         width: 100%;
         display: grid;
         place-items: center;
     }
     #stars{
-        justify-content: space-between;
+        justify-content: center;
     }
 }
