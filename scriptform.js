@@ -65,6 +65,30 @@ function validarReserva(event){
     }
 }
 
+// SUMAR DIAS FORMULARIO
+function sumarDias() {
+    var fechaInput = document.getElementById("ffecha").value;
+    var dias = parseInt (document.getElementById("ffechadias").value);
+    var fecha = new Date(fechaInput);
+
+    // Sumar los días
+    fecha.setDate(fecha.getDate() + dias + 1);
+
+    // Mostrar
+    var dia = ("0" + fecha.getDate()).slice(-2);
+    var mes = ("0" + (fecha.getMonth() + 1)).slice(-2);
+    var año = fecha.getFullYear();
+
+    var nuevaFecha = dia + "-" + mes + "-" + año;
+
+    // Mostrar la nueva fecha
+    if (document.getElementById("ffecha").value!="" &&  document.getElementById("ffechadias").value!="" ) {
+        document.getElementById("passwordHelpInline").innerHTML = "Reserva hasta el día  " + nuevaFecha;
+    }
+    
+}
+
+
 //** FORM RESEÑAS **//
     //validación
 function validarResenia(){ //event
