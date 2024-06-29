@@ -1,3 +1,4 @@
+/* boton wsp */
 .btnwsp {
     position: fixed;
     width: 55px;
@@ -26,10 +27,12 @@
     z-index: 1000; /* Asegura que esté por encima del contenido principal */
     text-align: right;
 }
-
+/* INDEX */
+/* .container-fluid{
+    background-color: #d9d9d9;
+} */
 #carrusel {
     z-index: -10;
-    /*margin-top: -150px;*/
 }
 #transparencia {
     display: block;
@@ -65,6 +68,9 @@ header {
     line-height: 1.7;
     z-index: 2;
     background-color: #d9d9d9;
+}
+#txtsn{
+    width: 70%;
 }
 #fondosn {
     background-image: url(Imagenes/fondosn.png);
@@ -125,17 +131,25 @@ header {
 @media (max-width: 600px){
     #fondocbn {padding: 80px 50px;}
 }
-/* CONTACTO */
+@media (max-width: 319px){
+    #btncbn{
+        width: auto;
+        height: auto;
+    }
 
+}
+
+/* CONTACTO */
 #contenedorc {
     background-image: url(Imagenes/fondoc.png);
     background-size: cover;
     width: 100%;
     height: 100%;
+    /* padding-top: 100px; */
     z-index: 2;
 }
 #contenidoc {
-    padding: 120px 130px 90px 100px;
+    padding: 100px 130px 80px 100px;
 }
 .btnredes {
     width: 50px;
@@ -155,7 +169,7 @@ header {
         padding: 50px;
     }
     #contenidoc-1 {width: 100%;}
-    #contenidoc-2 {width: 100%; height: 300px;}
+    #contenidoc-2 {width: 100%; height: 300px; margin-top: 20px;}
 } 
 
 /*SITIOS DE INTERES*/
@@ -165,16 +179,19 @@ header {
     width: 100%;
     height: 100%;
     z-index: 2;
-    padding: 60px 140px;
+    padding: 40px 140px 80px 140px;
     text-align: center;
+}
+#contenedorst > h2{
+    padding: 20px 0;
 }
 @media (max-width: 1000px){
     #contenedorst {
-        padding: 20px;
+        padding: 20px 20px 45px 20px;
     }
 }
 .st-container{
-    margin-top: 25px;
+    margin-top: 20px;
 }
 .cabania-text{
     margin: 0px 10px 15px 0px;
@@ -201,9 +218,10 @@ footer {
 #secf {
     float: left;
     color: white;
-    padding: 50px;
+    padding: 50px 50px 30px 50px;
     font-size: large;
 }
+#hide{ display: none;}
 @media (max-width: 991px) {
     #secf {
         width: 100%;
@@ -212,6 +230,8 @@ footer {
         border-style: solid;
         border-color: #141414;
     }
+    .hrfooter{ display: none; }
+    #hide{ display: block; }
 }
 #rsfooter {
     color: white;
@@ -220,6 +240,10 @@ footer {
 }
 #creadores {
     width: 100%;
-    text-align: center;
     color: white;
+}
+@media (max-width: 472px){
+    #creadores {
+        padding: 10px !important;
+    }
 }
