@@ -4,11 +4,11 @@ function navOpacoHamburguesa() {
     const nav = document.querySelector('.navbar');
     const contNav = document.querySelector('.container-nav');
 
-    if(nav.classList.contains('bg-opacity-10')) {
+    if(nav.classList.contains('bg-opacity-10') && window.scrollY < 70) {
 
         nav.classList.remove('bg-opacity-10')
         contNav.classList.remove('bg-opacity-50')
-    }else{
+    }else if(window.scrollY < 70){
         nav.classList.add('bg-opacity-10')
         contNav.classList.add('bg-opacity-50')
     }
