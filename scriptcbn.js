@@ -1,4 +1,6 @@
 // ** LISTADO DE CABAÑAS **
+
+// mostrar listado de cabañas
 const mostrarCabaniasList = () => {
 
     let wrapper = document.getElementById("cabanias-wrapper");
@@ -43,6 +45,7 @@ const mostrarCabaniasList = () => {
         });
 }
 
+// cargar listado: mostrar filtro
 function mostrarFullListado() {
     let listadoCabanias = document.getElementById("containerAll");
     listadoCabanias.innerHTML = '';
@@ -50,7 +53,7 @@ function mostrarFullListado() {
     let listadoHTML = `
         <div class="filtro-wrapper">
             <div class="row">
-                <div class="col-3" id="filtrodiv"><h4>Capacidad:</h4></div>
+                <div class="col-2" id="filtrodiv"><h4>Capacidad:</h4></div>
                 <div class="col" id="filtrodiv">
                     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group me-2" role="group" aria-label="First group">
@@ -71,6 +74,7 @@ function mostrarFullListado() {
     mostrarCabaniasList();
 }
 
+// cabañas filtradas
 const mostrarCabaniasFiltradas = (cantidad) => {
 
     let wrapper = document.getElementById("cabanias-wrapper");
@@ -112,6 +116,7 @@ const mostrarCabaniasFiltradas = (cantidad) => {
             console.error('Error al cargar datos JSON:', error);
         });
 }
+
 // filtro
 var filtro = null;
 function filtrar() {
@@ -128,17 +133,21 @@ function filtrar() {
     }
 }
 
+// mostrar/ocultar reseñas
 function toggleDiv() {
     var div = document.getElementById("f-resenias");
     div.classList.toggle("oculto");
   }
 
+// configurar boton de solicitar
 function solicitaReserva(ind){
     mostrarForm(ind)
     toggleDiv()
 }
 
-// acciones botones
+// acciones botones listado
+
+// muestra detalles de una cabaña especifica
 const mostrarMasInfo = (indice) => {
     toggleDiv();
     document.getElementById("btnenviar-rev").addEventListener("click", validarResenia);
@@ -149,7 +158,6 @@ const mostrarMasInfo = (indice) => {
     fetch('./cabanias.json')
         .then(res => res.json())
         .then(res => {
-            console.log('Datos JSON obtenidos:', res); // Verifica si los datos JSON se están leyendo correctamente
 
             let cabaniaHTML = `
                 <div class="container" id="div-cabania">
@@ -161,18 +169,18 @@ const mostrarMasInfo = (indice) => {
                     <!-- Gallery -->
                     <div class="row">
                         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" id="img-12">
-                        <img src="${res.cabanias[indice].img1}" class="w-100 shadow-1-strong rounded mb-4" id="img-1"/>
-                        <img src="${res.cabanias[indice].img2}" class="w-100 shadow-1-strong rounded mb-4" id="img-2"/>
+                            <img src="${res.cabanias[indice].img1}" class="w-100 shadow-1-strong rounded mb-4" id="img-1"/>
+                            <img src="${res.cabanias[indice].img2}" class="w-100 shadow-1-strong rounded mb-4" id="img-2"/>
                         </div>
                     
                         <div class="col-lg-4 mb-4 mb-lg-0" id="img-34">
-                        <img src="${res.cabanias[indice].img3}" class="w-100 shadow-1-strong rounded mb-4" id="img-3"/>
-                        <img src="${res.cabanias[indice].img4}" class="w-100 shadow-1-strong rounded mb-4" id="img-4"/>
+                            <img src="${res.cabanias[indice].img3}" class="w-100 shadow-1-strong rounded mb-4" id="img-3"/>
+                            <img src="${res.cabanias[indice].img4}" class="w-100 shadow-1-strong rounded mb-4" id="img-4"/>
                         </div>
                     
                         <div class="col-lg-4 mb-4 mb-lg-0" id="img-56">
-                        <img src="${res.cabanias[indice].img5}" class="w-100 shadow-1-strong rounded mb-4" id="img-5"/>
-                        <img src="${res.cabanias[indice].img6}" class="w-100 shadow-1-strong rounded mb-4" id="img-6"/>
+                            <img src="${res.cabanias[indice].img5}" class="w-100 shadow-1-strong rounded mb-4" id="img-5"/>
+                            <img src="${res.cabanias[indice].img6}" class="w-100 shadow-1-strong rounded mb-4" id="img-6"/>
                         </div>
                     </div>
                     <hr><br>
@@ -221,9 +229,7 @@ const mostrarForm = (indice) => {
         .then(res => res.json())
         .then(res => {
             const cantidad = res.cabanias[indice].cantP
-                    // console.log('MForm - cant personas: ' +cantidad)
             precio = res.cabanias[indice].precio
-                    // console.log('MForm - precio: ' +precio)
 
             var opciones = ''
                 for(let i=0; i <= cantidad ; i++){
@@ -304,20 +310,25 @@ const mostrarForm = (indice) => {
         });
 }
 
+
 // ** CABAÑA ESPECIFICA **
 
-// MUESTRA EL COSTO FINAL
-
+// muestra el costo final
 const muestraCostoF = () => { 
     preciowrapper= document.getElementById("precio");
     dias= parseInt(document.getElementById("ffechadias").value);
     console.log('MCosto: dias= ' + dias)
 
-    preciowrapper.innerHTML= '';
-    preciowrapper.innerHTML += "El precio estimado es de: $" + (dias*precio) ;
+    if(dias > 0){
+        preciowrapper.innerHTML= '';
+        preciowrapper.innerHTML += "El precio estimado es de: $" + (dias*precio);
+    }else{
+        preciowrapper.innerHTML= '';
+    }
 }
 
-// inicializar 
+
+// INICIALIZAR
 function iniciar() {
     mostrarFullListado();
 
@@ -348,65 +359,3 @@ window.onload = function() {
     iniciar();
 };
 // window.addEventListener("load", iniciar);
-
-// SUMAR DIAS FORMULARIO
-function sumarDias() {
-    var fechaInput = document.getElementById("ffecha").value;
-    var dias = parseInt (document.getElementById("ffechadias").value);
-    var fecha = new Date(fechaInput);
-
-    // Sumar los días
-    fecha.setDate(fecha.getDate() + dias + 1);
-
-    // Mostrar
-    var dia = ("0" + fecha.getDate()).slice(-2);
-    var mes = ("0" + (fecha.getMonth() + 1)).slice(-2);
-    var año = fecha.getFullYear();
-
-    var nuevaFecha = dia + "-" + mes + "-" + año;
-
-    // Mostrar la nueva fecha en algún lugar de tu página
-    if (document.getElementById("ffecha").value!="" &&  document.getElementById("ffechadias").value!="" ) {
-        document.getElementById("passwordHelpInline").innerHTML = "Reserva hasta el día  " + nuevaFecha;
-    }
-    
-}
-
-const mostrarCabania = (cbn) => {
-    let idwrapper= document.getElementById("id-json");
-    let descwrapper= document.getElementById("desc-json");
-    let img1= document.getElementById("img-1");
-    let img2= document.getElementById("img-2");
-    let img3= document.getElementById("img-3");
-    let img4= document.getElementById("img-4");
-    let img5= document.getElementById("img-5");
-    let img6= document.getElementById("img-6");
-    let caracts= document.getElementsByClassName("cars");
-    let pricewrapper= document.getElementById("precio-json");
-
-    fetch('./cabanias.json')
-        .then(res => res.json())
-        .then(res => {
-            console.log('Datos JSON obtenidos:', res); // Verifica si los datos JSON se están leyendo correctamente
-
-            res.forEach(dato => {
-                if (dato.id === cbn) {
-                    idwrapper.innerHTML= dato.id;
-                    descwrapper.innerHTML= dato.desc;
-                    img1.src = dato["img-1"];
-                    img2.src = dato["img-2"];
-                    img3.src = dato["img-3"];
-                    img4.src = dato["img-4"];
-                    img5.src = dato["img-5"];
-                    img6.src = dato["img-6"];
-                    dato.caracts.forEach((caract, index) => {
-                        caracts[index].innerHTML = Object.values(caract)[0];
-                    });
-                    pricewrapper.innerHTML= "$"+ dato.precio + " Por Día";
-                }
-            });
-        })
-        .catch(error => {
-            console.error('Error al cargar datos JSON:', error);
-        });
-}
